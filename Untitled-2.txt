@@ -1,0 +1,12 @@
+---
+-hosts: all
+ become: yes
+  tasks:
+    -name: create file
+       file:
+        path: /home/ansible/file1.yml
+        state:touch
+    -name: create directory
+       file:
+        path: /home/ansible/directory1
+        state:directory
